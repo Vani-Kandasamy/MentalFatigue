@@ -1,0 +1,7 @@
+streamlit
+tsfresh==0.21.0
+scikit-learn
+joblib==1.4.0
+numpy
+pandas
+scipy
