@@ -13,9 +13,9 @@ from tsfresh.utilities.dataframe_functions import impute
 import numpy as np
 
 def extract_features_from_csv(files):
-    # Read and concatenate all CSV files from the specified directory
-    files = [file for file in os.listdir(csv_folder_path) if file.endswith(".csv")]
-    dataframes = [pd.read_csv(os.path.join(csv_folder_path, file)) for file in files]
+   
+    # Read all uploaded CSVs and concatenate them
+    dataframes = [pd.read_csv(file) for file in files]
     data = pd.concat(dataframes, ignore_index=True)
 
     # Drop the label column for feature extraction
