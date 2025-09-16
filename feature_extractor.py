@@ -6,7 +6,7 @@ import os
 from tqdm import tqdm
 from collections import defaultdict
 import dask.dataframe as dd
-from dask.distributed import Client
+
 from tsfresh import extract_features, select_features
 from tsfresh.feature_extraction import EfficientFCParameters
 from tsfresh.utilities.dataframe_functions import impute
