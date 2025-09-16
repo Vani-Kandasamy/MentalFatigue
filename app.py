@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from feature_extraction import extract_features_from_csv
+from feature_extractor import extract_features_from_csv
 from model_prediction import load_model_and_predict
 import os
 
