@@ -31,13 +31,7 @@ def extract_features_from_csv(files):
         mapping_dict["ID"].append(id_)
         mapping_dict["Label"].append(label)
     mapping_df = pd.DataFrame(mapping_dict)
-
-   ''' 
-   # Setup Dask client for parallel processing and extract features
-    client = Client(n_workers=4)
-    ddf = dd.from_pandas(final_seq, npartitions=2)
-    extracted_features = extract_features(ddf, column_id="id", column_sort="Time", n_jobs=0, default_fc_parameters=EfficientFCParameters()).compute()
-   '''
+   
    # Extract features using tsfresh
     extracted_features = extract_features(
         final_seq,
