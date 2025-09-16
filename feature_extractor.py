@@ -37,7 +37,7 @@ def extract_features_from_csv(files):
     client = Client(n_workers=4)
     ddf = dd.from_pandas(final_seq, npartitions=2)
     extracted_features = extract_features(ddf, column_id="id", column_sort="Time", n_jobs=0, default_fc_parameters=EfficientFCParameters()).compute()
-    '''
+   '''
    # Extract features using tsfresh
     extracted_features = extract_features(
         final_seq,
