@@ -3,4 +3,4 @@ pandas
 tsfresh==0.21.0
 setuptools
 scipy
-dask
+dask[complete]>=2021.1.1
