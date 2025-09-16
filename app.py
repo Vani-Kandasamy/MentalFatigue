@@ -18,10 +18,7 @@ def main():
         # Display the extracted features if needed
         st.write("Extracted Features:")
         st.write(features_df)
-
-        # Cache the extracted features
         
-
         # Path to the pre-trained model
         model_path = "best_model_cE1_sNDARAC904DMU"
 
