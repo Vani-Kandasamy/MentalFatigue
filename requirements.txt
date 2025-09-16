@@ -1,5 +1,5 @@
-streamlit
-pandas
+streamlit==1.28.0
+pandas==1.5.3
 tsfresh==0.20.0
-setuptools
-scipy
+setuptools==65.0.2
+scipy==1.11.3
