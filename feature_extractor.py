@@ -17,7 +17,7 @@ def extract_features_from_csv(files):
     # Read all uploaded CSVs and concatenate them
     dataframes = [pd.read_csv(file) for file in files]
     data = pd.concat(dataframes, ignore_index=True)
-
+    print(data.shape)
     # Drop the label column for feature extraction
     final_seq = data.copy()
     final_seq.drop("label", axis=1, inplace=True)
@@ -39,7 +39,7 @@ def extract_features_from_csv(files):
         column_sort="Time",
         default_fc_parameters=EfficientFCParameters()
     )
-
+    print(extracted_features.shape)
     # Impute missing feature values and filter relevant features
     impute(extracted_features)
     labels_filter = mapping_df[mapping_df["ID"].isin(extracted_features.index)]
