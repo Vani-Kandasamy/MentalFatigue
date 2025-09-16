@@ -1,5 +1,5 @@
 streamlit
 pandas
-tsfreshtsfresh==0.21.0
+tsfresh==0.21.0
 setuptools
 scipy
