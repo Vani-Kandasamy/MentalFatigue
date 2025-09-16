@@ -20,14 +20,13 @@ def main():
         st.write(features_df)
 
         # Cache the extracted features
-        features_csv_path = "time_series_features_extracted.csv"
-        features_df.to_csv(features_csv_path, index=False)
+        
 
         # Path to the pre-trained model
         model_path = "best_model_cE1_sNDARAC904DMU"
 
         # Make predictions
-        active_percentage, passive_percentage = load_model_and_predict(features_csv_path, model_path)
+        active_percentage, passive_percentage = load_model_and_predict(features_df, model_path)
 
         # Show the results
         st.write(f"Percentage of Active Tasks: {active_percentage:.2f}%")
