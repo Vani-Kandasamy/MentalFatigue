@@ -2,15 +2,14 @@ import pickle
 import pandas as pd
 import numpy as np
 
-def load_model_and_predict(features_csv_path, model_path):
+def load_model_and_predict(features, model_path):
     # Load the model
     with open(model_path, "rb") as file:
         final_model = pickle.load(file)
     print("Model is loaded.")
 
     # Load the extracted features
-    features_filtered = pd.read_csv(features_csv_path)
-
+    features_filtered = features
     # Extract features and separate true labels
     y_true = features_filtered['label']
     test_data_list = features_filtered.drop(columns=['label'])
