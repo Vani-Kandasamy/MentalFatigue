@@ -1,5 +1,10 @@
-streamlit
-pandas
-tsfresh==0.21.0
-scipy
-setuptools
+streamlit>=1.36.0
+pandas>=2.2.0
+tsfresh>=0.22.0
+scipy>=1.13.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+tqdm>=4.66.0
+scikit-learn>=1.4.0
+pyarrow>=16.0.0
+fastparquet>=2024.2.0
