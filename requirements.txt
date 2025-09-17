@@ -1,6 +1,5 @@
 streamlit
 pandas
-tsfresh
-setuptools
+tsfresh==0.21.0
 scipy
-llvmlite==0.36.0
+setuptools
