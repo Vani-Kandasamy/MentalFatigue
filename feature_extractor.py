@@ -42,11 +42,11 @@ def extract_features_from_csv(files):
     print(extracted_features.shape)
     # Impute missing feature values and filter relevant features
     impute(extracted_features)
-    labels_filter = mapping_df[mapping_df["ID"].isin(extracted_features.index)]
-    features_filtered = select_features(extracted_features, labels_filter["Label"].values)
+    #labels_filter = mapping_df[mapping_df["ID"].isin(extracted_features.index)]
+    #features_filtered = select_features(extracted_features, labels_filter["Label"].values)
 
     # Attach the labels to the filtered features
-    features_filtered["label"] = features_filtered.index.map(lambda x: labels_filter.loc[labels_filter["ID"] == x, "Label"].iloc[0])
+    #features_filtered["label"] = features_filtered.index.map(lambda x: labels_filter.loc[labels_filter["ID"] == x, "Label"].iloc[0])
 
 
-    return features_filtered
+    return extracted_features
