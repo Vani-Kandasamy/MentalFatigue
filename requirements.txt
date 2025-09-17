@@ -3,3 +3,4 @@ pandas
 tsfresh==0.21.0
 setuptools
 scipy
+llvmlite; python_version < "3.10"
