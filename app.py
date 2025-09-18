@@ -7,7 +7,11 @@ import os
 
 
 def main():
-    st.title("Feature Extraction and Prediction App")
+    st.title("Mental Fatigue Prediction")
+    IMAGE_ADDRESS = "https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/vip/2025/05/GettyImages-2174143019.jpg"
+
+    
+    st.image(IMAGE_ADDRESS)
 
     # Upload files
     uploaded_files = st.file_uploader("Upload CSV files", type="csv", accept_multiple_files=True)
